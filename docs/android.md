@@ -1,4 +1,7 @@
+# Ollama android image
 
+## set environment envirment
+```shell
 export GOOS=android
 export GOARCH=arm64
 export CGO_ENABLED=1
@@ -26,3 +29,4 @@ package main
 go generate ./...
 
 go build -mod=mod -x -a  -tags="android cgo" -ldflags="-s -w" -o ollama-android
+```
